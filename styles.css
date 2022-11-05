@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #ad9cff;
+}
+
+
+/****************************** HEADER ******************************/
+
+header {
+    background: #c9beff;
+    height: 160px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 300px 0 300px;
+}
+
+header img {
+    max-width: 90px;
+    margin-right: 40px;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+header img:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+header nav {
+    display: flex;
+    list-style: none;
+}
+
+header nav li {
+    color: black;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+    text-transform: uppercase;
+    padding: 32px;
+    margin-left: 20px;
+}
+
+header nav li:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background: #9a90cc;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    transition-duration: 150ms;
+}
+
+
+/****************************** MAIN ******************************/
+
+main {
+    background: white;
+    height: 100vh;
+    padding: 0 300px 0 300px;
+    text-align: center;
+}
+
+main h1 {
+    font-family: 'Poor Story', cursive;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+main h2 {
+    font-size: 24px;
+}
+
+main p {
+    font-size: 18px;
+}
+
+.container {
+    margin: 160px 0 160px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrum {
+    background: #8836e6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    transform-origin: center;
+    animation: rotate 2s ease forwards infinite;
+}
+
+.circle {
+    background: #8836e6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle:nth-child(1) {
+    left: -100px;
+    animation: slideleft 2s ease forwards infinite;
+}
+
+.circle:nth-child(2) {
+    left: 100px;
+    top: -40px;
+    animation: slideright 2s ease forwards infinite;
+}
+
+
+@keyframes rotate {
+    0% {transform:rotate(0deg)}
+    50% {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+
+@keyframes slideleft {
+    0% {transform: translatex(0px);
+        background: #000000;}
+    25% {transform: translatex(-100px);
+        background: #000000;}
+    50% {transform: translatex(0px);
+        background: #8836e6;}
+    100% {background: #8836e6;}
+  }
+
+  @keyframes slideright {
+    0% {transform: translatex(0px);
+        background: #000000;}
+    25% {transform: translatex(100px);
+        background: #000000;}
+    50% {transform: translatex(0px);
+        background: #8836e6;}
+    100% {background: #8836e6;}
+  }
+
+/****************************** FOOTER ******************************/
+
+footer {
+    background: #c9beff;
+    height: 80px;
+    margin: 0;
+    margin-top: auto;
+}
+
+footer p {
+    color: black;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    padding: 0 300px 0 300px;
+    line-height: 80px;
+}
+
+
+/****************************** MEDIA QUERIES ******************************/
+
+@media (max-width: 1120px) {
+    header {
+        padding: 0px 160px 0 160px;
+    }
+
+    header img {
+        max-width: 70px;
+        margin-right: 20px;
+    }
+
+    header nav li {
+        font-size: 16px;
+        font-weight: 550;
+        padding: 24px;
+        margin-left: 15px;
+    }
+    
+    main {
+        padding: 0 160px 0 160px;
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 40px;
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+    
+    main p {
+        font-size: 16px;
+    }
+    
+    footer p {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 0 160px 0 160px;
+
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 0 40px 0 40px;
+    }
+
+    header img {
+        max-width: 50px;
+    }
+
+    header nav li {
+        font-size: 14px;
+        font-weight: 550;
+        padding: 18px;
+        margin-left: 15px;
+    }
+    
+    main {
+        padding: 0 40px 0 40px;
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 32px;
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+
+    main h2 {
+        font-size: 18px;
+    }
+    
+    main p {
+        font-size: 14px;
+    }
+    
+    footer p {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 0 160px 0 160px;
+
+    }
+
+    @keyframes slideleft {
+        0% {transform: translatex(0px);
+            background: #000000;}
+        25% {transform: translatex(-50px);
+            background: #000000;}
+        50% {transform: translatex(0px);
+            background: #8836e6;}
+        100% {background: #8836e6;}
+      }
+    
+      @keyframes slideright {
+        0% {transform: translatex(0px);
+            background: #000000;}
+        25% {transform: translatex(50px);
+            background: #000000;}
+        50% {transform: translatex(0px);
+            background: #8836e6;}
+        100% {background: #8836e6;}
+      }
+}
